@@ -80,3 +80,27 @@ if pallet_location_conflict(tag_id):
 
 ```
 
+### 2.3. At Rest: Data Storage & Batch Validation
+
+#### Once data is stored in a warehouse or data lake, deeper profiling and validation can occur.
+
+<ins>Data Profiling Tools</ins>
+
+#### Tools like Great Expectations, AWS Deequ, or Monte Carlo automatically check:
+
+- Schema conformity
+
+- Missing value ratios
+
+- Anomalous distributions
+
+- Automated Validation Checks
+
+- Freshness – data arrives within SLA
+
+- Volume – expected number of events per time window
+
+- Accuracy/Plausibility – e.g., "An item can’t be scanned in NY and LA within an hour"
+
+- Schema Validation – field formats, data types, lengths
+
