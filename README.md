@@ -104,3 +104,17 @@ if pallet_location_conflict(tag_id):
 
 - Schema Validation – field formats, data types, lengths
 
+
+### 2.4. Governance and Continuous Monitoring
+
+#### Data quality management is not a one-time exercise, rather, it is an operationla discipline.
+
+- Data Lineage Tracking: Trace every field from sensor to dashboard.
+
+- Quality Dashboards & Alerts: Visualize DQ metrics (freshness, completeness, anomalies).
+
+- SLAs & Ownership: Assign accountability — e.g., “Reader X must report ≥99% uptime.”
+
+---
+
+
