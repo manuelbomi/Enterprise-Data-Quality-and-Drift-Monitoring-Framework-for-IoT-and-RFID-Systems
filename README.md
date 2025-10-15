@@ -117,4 +117,18 @@ if pallet_location_conflict(tag_id):
 
 ---
 
+## 3. Statistical Foundations for IoT/RFID Data Quality
+
+#### Statistical tools strengthen the framework by quantifying data stability and drift.
+
+
+| **Tool**             | **Best For**              | **IoT/RFID Example**                | **Limitation**        |
+| -------------------- | ------------------------- | ----------------------------------- | --------------------- |
+| Mean/Std Dev         | Drift & outlier detection | Sensor calibration drift            | Misses shape changes  |
+| Wasserstein Distance | Distribution shifts       | Reader performance degradation      | Computationally heavy |
+| ANOVA                | Cross-sensor consistency  | Compare sensor accuracy by location | Needs multiple groups |
+
+
+
+
 
