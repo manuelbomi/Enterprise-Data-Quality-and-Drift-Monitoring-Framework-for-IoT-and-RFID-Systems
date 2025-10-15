@@ -49,5 +49,15 @@ if not (-40 <= temperature <= 125):
 
 ```
 
+#### Duplicate Filtering for RFID
 
+* RFID tags can be read many times per second — use logic to deduplicate signals:
+
+```ruby
+# Example: Filter duplicate RFID reads
+if tag_seen_recently(tag_id, within_seconds=5):
+    ignore_read()
+
+
+```
 
