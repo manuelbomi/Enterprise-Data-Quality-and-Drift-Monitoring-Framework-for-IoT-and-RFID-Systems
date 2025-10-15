@@ -28,7 +28,7 @@
 | **Governance**    | Data Lineage, Dashboards & Alerts, Master Data Management (MDM), SLAs & Ownership                      |
 
 
-### 2.1. At the Source: Data Generation & Acquisition
+#### 2.1. At the Source: Data Generation & Acquisition
 
 #### Preventing bad data at the source is far cheaper than fixing it downstream.
 
