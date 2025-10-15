@@ -13,3 +13,16 @@
 
 #### Early detection of drift and quality degradation prevents cascading business impact.
 
+
+## 2. A Layered Approach to Data Quality
+
+#### A robust data quality architecture for IoT and RFID systems follows a multi-layered approach, covering every stage from data generation to governance.
+
+| **Stage**         | **Key Techniques**                                                                                     |
+| ----------------- | ------------------------------------------------------------------------------------------------------ |
+| **At the Source** | Reader Calibration, Environmental Optimization, Edge Validation, Duplicate Filtering                   |
+| **In Motion**     | Robust Protocols (MQTT/Kafka), Stream Processing, Real-time Anomaly Detection, Enrichment              |
+| **At Rest**       | Data Profiling, Cleansing, Data Quality Rules (Freshness, Volume, Schema Validation), Batch Validation |
+| **Governance**    | Data Lineage, Dashboards & Alerts, Master Data Management (MDM), SLAs & Ownership                      |
+
+
