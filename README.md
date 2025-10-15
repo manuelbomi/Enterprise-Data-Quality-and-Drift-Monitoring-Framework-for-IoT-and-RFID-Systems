@@ -94,7 +94,7 @@ if pallet_location_conflict(tag_id):
 
 - Anomalous distributions
 
-- Automated Validation Checks
+<ins>Automated Validation Checks</ins>
 
 - Freshness – data arrives within SLA
 
