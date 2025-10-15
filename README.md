@@ -28,7 +28,7 @@
 | **Governance**    | Data Lineage, Dashboards & Alerts, Master Data Management (MDM), SLAs & Ownership                      |
 
 
-#### 2.1. At the Source: Data Generation & Acquisition
+### 2.1. At the Source: Data Generation & Acquisition
 
 #### Preventing bad data at the source is far cheaper than fixing it downstream.
 
@@ -39,5 +39,15 @@
 - Environmental Optimization: Optimize antenna placement to prevent dead zones or cross-reads.
 
 - Edge Data Validation: Apply schema and range checks at the device gateway.
+
+
+```ruby
+# Example edge-level validation
+schema = {"sensor_id": str, "timestamp": float, "temperature": float}
+if not (-40 <= temperature <= 125):
+    discard_reading()
+
+```
+
 
 
