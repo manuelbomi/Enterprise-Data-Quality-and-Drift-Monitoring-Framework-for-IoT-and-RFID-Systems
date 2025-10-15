@@ -277,7 +277,7 @@ def detect_temporal_drift(current, baseline):
 | ------ | ------------------------ | -------------- | ---------------------------------- |
 | Week 1 | 23.5                     | 22–25          | No                                 |
 | Week 2 | 23.8                     | 22–25          | No                                 |
-| Week 3 | 26.2                     | 22–25          | ✅ Yes — possible calibration drift |
+| Week 3 | 26.2                     | 22–25          | Yes — possible calibration drift |
 
 
 #### Even though each individual reading is “valid” (a number between -40 and 125), the pattern over time has shifted outside expectations.
