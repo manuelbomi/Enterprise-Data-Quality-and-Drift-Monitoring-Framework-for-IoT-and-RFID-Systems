@@ -13,6 +13,8 @@
 
 #### Early detection of drift and quality degradation prevents cascading business impact.
 
+---
+
 
 ## 2. A Layered Approach to Data Quality
 
