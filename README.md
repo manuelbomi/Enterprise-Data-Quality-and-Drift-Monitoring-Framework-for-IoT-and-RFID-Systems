@@ -28,3 +28,16 @@
 | **Governance**    | Data Lineage, Dashboards & Alerts, Master Data Management (MDM), SLAs & Ownership                      |
 
 
+### 2.1. At the Source: Data Generation & Acquisition
+
+#### Preventing bad data at the source is far cheaper than fixing it downstream.
+
+<ins>Key Practices</ins>:
+
+- Sensor & Reader Calibration: Regularly verify sensor accuracy (e.g., temperature sensors) and RFID reader antenna alignment.
+
+- Environmental Optimization: Optimize antenna placement to prevent dead zones or cross-reads.
+
+- Edge Data Validation: Apply schema and range checks at the device gateway.
+
+
