@@ -61,3 +61,22 @@ if tag_seen_recently(tag_id, within_seconds=5):
 
 ```
 
+### 2.2. In Motion: Data Ingestion & Streaming
+
+#### Use resilient, monitored pipelines for ingesting high-frequency data.
+
+* Protocols: MQTT for lightweight IoT messaging; Kafka for enterprise-scale stream ingestion.
+
+* Secure Transmission: Always encrypt (TLS/SSL) and use acknowledgments.
+
+* Stream Processing: Use Apache Flink or Spark Streaming for near real-time anomaly detection and data enrichment.
+
+```ruby
+
+# Example: Real-time anomaly flagging
+if pallet_location_conflict(tag_id):
+    trigger_alert("Duplicate RFID read across locations")
+
+
+```
+
