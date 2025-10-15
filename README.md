@@ -129,6 +129,88 @@ if pallet_location_conflict(tag_id):
 | ANOVA                | Cross-sensor consistency  | Compare sensor accuracy by location | Needs multiple groups |
 
 
+### 3.1 Mean and Standard Deviation: Baseline Monitoring
+
+```ruby
+# Detecting sensor drift
+current_mean = df_last_week['temperature'].mean()
+historical_mean = df_last_month['temperature'].mean()
+std_dev = df_last_month['temperature'].std()
+
+if abs(current_mean - historical_mean) > 2 * std_dev:
+    trigger_calibration_alert()
+
+```
+
+#### Applications:
+
+- Detecting calibration drift
+
+- Throughput monitoring
+
+- Setting anomaly thresholds (±3σ)
+
+### 3.2 Wasserstein Distance: Distribution Shape Changes
+
+#### Captures subtle changes that mean/std dev may miss.
+
+```ruby
+from scipy.stats import wasserstein_distance
+
+wd = wasserstein_distance(baseline_reads, current_reads)
+if wd > 0.05:
+    investigate_reader_issues()
+
+
+```
+
+#### Use Cases:
+
+- Reader performance degradation
+
+- Environmental interference
+
+- Multi-sensor consistency
+
+### 3.3 ANOVA: Multi-Sensor or Multi-Location Consistency
+
+```ruby
+from scipy.stats import f_oneway
+
+f_stat, p_value = f_oneway(sensor_a, sensor_b, sensor_c)
+if p_value < 0.05:
+    trigger_cross_sensor_calibration_check()
+
+```
+
+#### 3.4 Automated Quality Scoring
+
+```ruby
+def calculate_data_quality_score(sensor_data):
+    scores = {}
+    scores['completeness'] = 1 - (sensor_data.isnull().sum() / len(sensor_data))
+    scores['accuracy'] = 1 - min(1, wasserstein_distance(sensor_data, gold_standard))
+    return weighted_average(scores)
+
+```
+
+---
+
+## 4. Drift as a Dimension of Data Quality
+
+#### Traditional data quality focuses on correctness and completeness — drift detection ensures temporal consistency.
+
+##### <ins>Meaning of Temporal Consistency</ins>
+
+#### Temporal consistency means that your data behaves consistently over time, according to established expectations, patterns, or physical laws.
+
+#### It ensures that data today is comparable to data yesterday — not because the values are identical, but because the process generating those values is stable and hasn’t silently changed in an unexpected way.
+
+#### In other words, temporal consistency verifies that:
+
+“The same sensors, under the same conditions, should produce data with the same statistical behavior over time.
+
+
 
 
 
